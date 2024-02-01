@@ -1,0 +1,30 @@
+## Requirement
+
++ Java installed and set in `PATH`.
+
+## Usage
+
+### From Source
+
+1. Compile the `Calculator.java` file
+
+    ```console
+    foo@bar:~$ javac Calculator.java
+    ```
+
+1. Run the Calculator
+
+    ```console
+    foo@bar:~$ java Calculator
+
+
+
+/var/lib/jenkins/workspace/Testing Git/Java-Calculator-main
+
+/usr/lib/jvm/java-11-openjdk-11.0.19.0.7-1.amzn2.0.1.x86_64
+
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-11.0.19.0.7-1.amzn2.0.1.x86_64"
+
+export PATH=$JAVA_HOME/bin:$PATH
+
+    ```
