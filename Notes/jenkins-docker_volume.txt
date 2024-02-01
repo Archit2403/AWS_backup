@@ -1,0 +1,37 @@
+    1  yum install  docker
+    2  systemctl status docker
+    3  systemctl enable  docker
+    4  systemctl status  docker
+    5  systemctl start  docker
+    6  systemctl status  docker
+    7  cd ..
+    8  systemctl status  docker
+    9  ps aux | grep docker
+   10  ps aux | grep docker
+   11  df -h
+   12  docker ps
+   13  docker service ls
+   14  docker pull jenkins/jenkins:latest
+   15  docker images
+   16  docker ps
+   17  df -h
+   18  docker run -d -p 8080:8080 jenkins/jenkins
+   19  docker ps
+   20  docker images
+   21  free -m
+   22  df -h
+   23  service status jenkins
+   24  docker exec -it c0a0e05fade6 bash
+   25  docker exec -it cf7bbfeb873b bash
+   26  docker cp initialAdminPassword cf7bbfeb873b:/var/jenkins_home/secrets/initialAdminPassword
+   27  docker cp initialAdminPassword cf7bbfeb873b:/var/jenkins_home/secrets
+   28  docker cp  cf7bbfeb873b:/var/jenkins_home/secrets/initialAdminPassword
+   29  docker exec -it cf7bbfeb873b bash
+   30  docker ps
+   31  docker exec -it cf7bbfeb873b bash
+   32  history
+
+
+===================================================================================================================================================================================
+docker run -d -p 8080:8080 jenkins/jenkins
+docker run -d -v /home/ec2-user/jenkins:/var/jenkins_home -p 8080:8080 -u root jenkins/jenkins

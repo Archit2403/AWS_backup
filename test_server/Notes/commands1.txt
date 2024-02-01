@@ -1,0 +1,862 @@
+    1  sudo yum update –y
+    2  sudo wget -O /etc/yum.repos.d/jenkins.repo     https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    3  sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io.key
+    4  sudo yum upgrade
+    5  sudo amazon-linux-extras install java-openjdk11 -y
+    6   57  ruby3.0                  available    [ =stable ]
+    7   58  postgresql12             available    [ =stable ]
+    8   57  ruby3.0                  available    [ =stable ]
+    9   58  postgresql12             available    [ =stable ]
+   10  sudo yum install jenkins -y
+   11  sudo systemctl enable jenkins
+   12  sudo systemctl start jenkins
+   13  sudo systemctl status jenkins
+   14  sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+   15  sudo su -
+   16  history
+   17  sudo su -
+   18  ssh
+   19  ssh 172.31.47.79
+   20  sudo su -
+   21  ll
+   22  ls -la
+   23  cd .ssh/
+   24  ll
+   25  cat authorized_keys
+   26  ssh-copy-id ec2-user@172.31.47.79
+   27  ssh-keygen -t rsa -b 4096
+   28  ls -lthr
+   29  ll
+   30  cat id_rsa
+   31  ll
+   32  cat id_rsa.pub
+   33  ssh-copy-id ec2-user@172.31.47.79
+   34  sudo su -
+   35  ssh-copy-id ec2-user@172.31.47.79
+   36  sudo su -
+   37  ll
+   38  cat id_rsa.pub
+   39  ping 172.31.47.79b
+   40  ping 172.31.47.79
+   41  telnet 172.31.47.79 22
+   42  yum install telnet
+   43  sudo su -
+   44  ll
+   45  cat id_rsa.pub
+   46    pwd
+   47  cat id_rsa.pub
+   48  ssh 172.31.47.79
+   49  history
+   50  ls -lthr
+   51  ansible -m ping -a all
+   52  ansible all  -m ping
+   53  sudo su -
+   54  ansible all -m ping
+   55  grep inventory
+   56  grep inventory  /etc/ansible/ansible.cfg
+   57  cat /etc/ansible/inventory_list
+   58  vi  /etc/ansible/inventory_list
+   59  sudo vi  /etc/ansible/inventory_list
+   60  ansible all -m ping
+   61  ssh 172.31.45.114
+   62  ssh 172.31.42.233
+   63  ssh 172.31.45.114
+   64  ansible all -m ping
+   65  ansible all -m command -a "uptime"
+   66  cd ..
+   67  pwd
+   68  mkdir ansible_playbooks
+   69  cd ansible_playbooks/
+   70  ll
+   71  cat /etc/ansible/inventory_list
+   72  vi service_status.yml
+   73  vi service_sshd_status.yml
+   74  ansible-playbook all service_sshd_status.yml
+   75  ansible-playbook  service_sshd_status.yml -i /etc/ansible/inventory_list
+   76  vi service_sshd_status.yml
+   77  ansible-playbook all service_sshd_status.yml
+   78  ansible-playbook  service_sshd_status.yml -i /etc/ansible/inventory_list
+   79  ll
+   80  vi service_sshd_status.yml
+   81  ansible-playbook  service_sshd_status.yml -i /etc/ansible/inventory_list
+   82  vi service_sshd_status.yml
+   83  ansible-playbook  service_sshd_status.yml -i /etc/ansible/inventory_list
+   84  vi service_sshd_status.yml
+   85  ansible-playbook  service_sshd_status.yml -i /etc/ansible/inventory_list
+   86  vi service_sshd_status.yml
+   87  ansible-playbook  service_sshd_status.yml -i /etc/ansible/inventory_list
+   88  vi service_sshd_status.yml
+   89  ansible-playbook  service_sshd_status.yml -i /etc/ansible/inventory_list
+   90  vi service_sshd_status.yml
+   91  ansible-playbook  service_sshd_status.yml -i /etc/ansible/inventory_list
+   92  cat service_sshd_status.yml
+   93  vi test_sshd_status.yml
+   94  ansible-playbook  test_sshd_status.yml -i /etc/ansible/inventory_list
+   95  vi test_sshd_status.yml
+   96  ansible-playbook  test_sshd_status.yml -i /etc/ansible/inventory_list
+   97  vi test_sshd_status.yml
+   98  ansible-playbook  test_sshd_status.yml -i /etc/ansible/inventory_list
+   99  vi test_sshd_status.yml
+  100  ansible-playbook  test_sshd_status.yml -i /etc/ansible/inventory_list
+  101  vi test_sshd_status.yml
+  102  ansible-playbook  test_sshd_status.yml -i /etc/ansible/inventory_list
+  103  ansible all -m service -a "sshd"
+  104  ansible all -m service -a "who"
+  105  ansible all -m command -a "who"
+  106  ansible all -m command -a "last reboot"
+  107  ansible all -m ping
+  108  ssh 172.31.47.79
+  109  ssh 172.31.45.114
+  110  sudo su -
+  111  ansible -m ping all
+  112  sudo su -
+  113  ansible -m ping all
+  114  ansible -m command 'uptime' all
+  115  ansible -m command 'date' all
+  116  ansible -m command 'date'
+  117  ansible -m uptime all
+  118  ll
+  119  cd ansible_playbooks/
+  120  ll
+  121  pwd
+  122  ll
+  123  vi user_creation.yml
+  124  cat /etc/ansible/ansible.cfg
+  125  cat /etc/ansible/ansible.cfg  | grep host
+  126  cat /etc/ansible/ansible.cfg  | grep invent
+  127  cat /etc/ansible/inventory_list
+  128  fg
+  129  bg
+  130  ll
+  131  cat user
+  132  cat user_creation.yml
+  133  cat /etc/ansible/inventory_list
+  134  vi user_creation.yml
+  135  cat user_creation.yml
+  136  vi user_creation.yml
+  137  ansible-playbook user_creation.yml
+  138  vi user_creation.yml
+  139  cat user_creation.yml
+  140  vi  user_creation.yml
+  141  ansible-playbook user_creation.yml
+  142  vi  user_creation.yml
+  143  ansible-playbook user_creation.yml
+  144  vi  user_creation.yml
+  145  ansible-playbook user_creation.yml
+  146  vi  user_creation.yml
+  147  ansible-playbook user_creation.yml
+  148  vi  user_creation.yml
+  149  ansible-playbook user_creation.yml
+  150  vi  user_creation.yml
+  151  ansible-playbook user_creation.yml
+  152  vi  user_creation.yml
+  153  ansible-playbook user_creation.yml
+  154  vi  user_creation.yml
+  155  ansible-playbook user_creation.yml
+  156  vi  user_creation.yml
+  157  ansible-playbook user_creation.yml
+  158  vi  user_creation.yml
+  159  vi user_deletion.yml
+  160  ansible_playbook user_deletion.yml
+  161  ansible-playbook user_deletion.yml
+  162  vi user_deletion.yml
+  163  ansible-playbook user_deletion.yml
+  164  vi user_deletion.yml
+  165  ansible-playbook user_deletion.yml
+  166  vi user_deletion.yml
+  167  ansible-playbook user_deletion.yml
+  168  vi user_deletion.yml
+  169  ls
+  170  vi user_creation.yml
+  171  vi test_sshd_status.yml
+  172  vi user_deletion.yml
+  173  ansible-playbook user_deletion.yml
+  174  ls
+  175  vi user_creation.yml
+  176  vi user_deletion.yml
+  177  ansible-playbook user_deletion.yml
+  178  ls
+  179  cat user_creation.yml
+  180  mv user_deletion.yml group_deletion.yml
+  181  ls
+  182  vi user_creation.yml
+  183  ansible-playbook user_creation.yml
+  184  vi user_creation.yml
+  185  ansible-playbook user_creation.yml
+  186  cat group_deletion.yml
+  187  cat user_creation.yml
+  188  vi user_creation.yml
+  189  ansible-playbook user_creation.yml
+  190  cat user_creation.yml
+  191  vi user_creation.yml
+  192  cat /etc/ansible/inventory_list
+  193  ssh 172.31.47.79
+  194  ansible-playbook group-deletion.yml
+  195  cd ansible_playbooks/
+  196  ansible-playbook group-deletion.yml
+  197  ll
+  198  cd ..
+  199  ansible-playbook group_deletion.yml
+  200  cd ansible_playbooks/
+  201  ansible-playbook group_deletion.yml
+  202  ll
+  203  view user_deletion.yml
+  204  view user_creation.yml
+  205  vi user_deletion.yml
+  206  view group_deletion.yml
+  207  ll
+  208  cd ansible_playbooks/
+  209  ll
+  210  vi user_creation.yml
+  211  ansible-playbook user_creation.yml
+  212  vi user_creadtion1
+  213  ansible-playbook user_creadtion1
+  214  ll
+  215  vi group_deletion.yml
+  216  vi user_creadtion1
+  217  ansible-playbook user_creadtion1
+  218  ll
+  219  view group_deletion.yml
+  220  view user_creation.yml
+  221  vi User_C1.yml
+  222  ansible-playbook User_C1.yml
+  223  ll
+  224  vi user_creation.yml
+  225  ansible-playbook user_creation.yml
+  226  vi user_creation.yml
+  227  ansible-playbook user_creation.ym
+  228  ansible-playbook user_creation.yml
+  229  vi user_creation.yml
+  230  ll
+  231  vi user_creadtion1
+  232  ansible-playbook user_creadtion1
+  233  vi user_creadtion1
+  234  ansible-playbook user_creadtion1
+  235  vi user_creadtion1
+  236  ansible-playbook user_creadtion1
+  237  view user_creadtion1
+  238  ll
+  239  cp group_deletion.yml group_creation.yml
+  240  view group_creation.yml
+  241  vi group_creation.yml
+  242  ansible-playbook group_creation.yml
+  243  ansible-playbook user_creation.yml
+  244  ll
+  245  vi
+  246  vi user_creation.yml
+  247  ansible-playbook user_creation.yml
+  248  vi user_creation.yml
+  249  ansible-playbook user_creation.yml
+  250  vi user_creation.yml
+  251  ll
+  252  ansible-playbook group_deletion.yml
+  253  ll
+  254  cp user_creation.yml user_deletion.yml
+  255  vi user_deletion.yml
+  256  ansible-playbook user_deletion.yml
+  257  ansible-playbook user_creation.yml
+  258  ansible-playbook user_deletion.yml
+  259  cd ansible_playbooks/
+  260  ansible-playbook group_deletion.yml
+  261  ssh 172.31.45.114
+  262  ansible-playbook group_deletion.yml
+  263  vi user_deletion.yml
+  264  ssh 172.31.45.114
+  265  cat user_deletion.yml
+  266  ssh 172.31.45.114
+  267  ls -lthr
+  268  cat group_creation.yml
+  269  cat /etc/ansible/inventory_list
+  270  ll
+  271  ssh 172.31.45.114
+  272  cp user_creation.yml yum_update.yml
+  273  vim yum_update.yml
+  274  vi yum_update.yml
+  275  fg
+  276  bg
+  277  fg
+  278  vi yum_update.yml
+  279  bg
+  280  fg
+  281  vi yum_update.yml
+  282  vi user_creation.yml
+  283  ls -la
+  284  rm .user_creation.yml.swp
+  285  vi user_creation.yml
+  286  cat yum_update.yml
+  287  cat /etc/ansible/inventory_list
+  288  ssh 172.31.45.114
+  289  cat /etc/ansible/inventory_list
+  290  ssh 172.31.47.79
+  291  ssh 172.31.45.114
+  292  cat /etc/ansible/inventory_list
+  293  cat yum_update.yml
+  294  vi  yum_update.yml
+  295  ansible-playbook yum_update.yml
+  296  vi  yum_update.yml
+  297  ansible-playbook yum_update.yml
+  298  cat  yum_update.yml
+  299  vi yum_update1.yml
+  300  ansible-playbook yum_update1.yml
+  301  vi yum_update1.yml
+  302  ansible-playbook yum_update1.yml
+  303  vi yum_update1.yml
+  304  cat yum_update1.yml
+  305  cat user_crea
+  306  cat user_deletion.yml
+  307  cat yum_update1.yml
+  308  vi yum_update1.yml
+  309  ansible-playbook yum_update1.yml
+  310  vi yum_update1.yml
+  311  ansible-playbook yum_update1.yml
+  312  vi yum_update1.yml
+  313  ansible-playbook yum_update1.yml
+  314  cat  yum_update1.yml
+  315  vi  yum_update1.yml
+  316  ansible-playbook yum_update1.yml
+  317  vi  yum_update1.yml
+  318  ansible-playbook yum_update1.yml
+  319  vi  yum_update1.yml
+  320  ansible-playbook yum_update1.yml
+  321  vi  yum_update1.yml
+  322  ansible-playbook yum_update1.yml
+  323  vi  yum_update1.yml
+  324  ansible-playbook yum_update1.yml
+  325  vi  yum_update1.yml
+  326  ansible-playbook yum_update1.yml
+  327  vi  yum_update1.yml
+  328  ansible-playbook yum_update1.yml
+  329  vi  yum_update1.yml
+  330  ansible-playbook yum_update1.yml
+  331  vi  yum_update1.yml
+  332  ansible-playbook yum_update1.yml
+  333  vi  yum_update1.yml
+  334  ansible-playbook yum_update1.yml
+  335  vi  yum_update1.yml
+  336  ansible-playbook yum_update1.yml
+  337  vi  yum_update1.yml
+  338  ansible-playbook yum_update1.yml
+  339  vi  yum_update1.yml
+  340  ansible-playbook yum_update1.yml
+  341  vi  yum_update1.yml
+  342  ansible-playbook yum_update1.yml
+  343  vi  yum_update1.yml
+  344  ansible-playbook yum_update1.yml
+  345  vi  yum_update1.yml
+  346  ansible-playbook yum_update1.yml
+  347  sudo su -
+  348  ssh 172.31.45.114
+  349  ansible-playbook yum_update1.yml
+  350  python2
+  351  vi  yum_update1.yml
+  352  ansible-playbook yum_update1.yml
+  353  ssh 172.31.45.114
+  354  vi  yum_update1.yml
+  355  cat yum_update1.yml
+  356  ansible-playbook yum_update1.yml
+  357  vi  yum_update1.yml
+  358  ansible-playbook yum_update1.yml
+  359  vi  yum_update1.yml
+  360  ansible-playbook yum_update1.yml
+  361  vi  yum_update1.yml
+  362  ssh 172.31.45.114
+  363  cat /etc/ansible/inventory_list
+  364  ssh 172.31.42.233
+  365  cat /etc/ansible/inventory_list
+  366  vi  yum_update1.yml
+  367  ansible-playbook yum_update1.yml
+  368  vi  yum_update1.yml
+  369  ansible-playbook yum_update1.yml
+  370  ssh 172.31.47.79
+  371  ssh 172.31.42.233
+  372  vi  yum_update1.yml
+  373  ansible-playbook yum_update1.yml
+  374  vi  yum_update1.yml
+  375  ssh 172.31.47.79
+  376  vi  yum_update1.yml
+  377  ansible-playbook yum_update1.yml
+  378  ssh 172.31.47.79
+  379  vi  yum_update1.yml
+  380  ansible-playbook yum_update1.yml
+  381  vi  yum_update1.yml
+  382  ansible-playbook yum_update1.yml
+  383  vi  yum_update1.yml
+  384  ssh 172.31.47.79
+  385  vi  yum_update1.yml
+  386  ansible-playbook yum_update1.yml
+  387  ansible -m ping all
+  388  ansible -m dnf -a 'update'
+  389  ansible -m dnf -a "update"
+  390  ansible -m dnf -a update
+  391  ansible -m dnf all
+  392  sudo ansible -m dnf all
+  393  ansible -m ping 172.31.47.114
+  394  ansible -m ping -i /etc/ansible/inventory_list
+  395  ansible -m ping -i "/etc/ansible/inventory_list"
+  396  ansible -m ping all
+  397  cd ansible_playbooks/
+  398  ll
+  399  rm -rf 1 User_C1.yml user_creadtion1
+  400  ll
+  401  view test_sshd_status.yml
+  402  ansible-playbook test_sshd_status.yml
+  403  view test_sshd_status.yml
+  404  vi test1_ssh_status.yml
+  405  ansible-playbook test1_ssh_status.yml
+  406  vi test1_ssh_status.yml
+  407  ansible-playbook test1_ssh_status.yml
+  408  vi test1_ssh_status.yml
+  409  ansible-playbook test1_ssh_status.yml
+  410  vi test1_ssh_status.yml
+  411  ansible-playbook test1_ssh_status.yml
+  412  vi test2_ssh_status.yml
+  413  ansible-playbook test2_ssh_status.yml
+  414  vi test2_ssh_status.yml
+  415  ansible-playbook test2_ssh_status.yml
+  416  vi test2_ssh_status.yml
+  417  ansible-playbook test2_ssh_status.yml
+  418  vi test2_ssh_status.yml
+  419  ll
+  420  vi service_sshd_status.yml
+  421  vi test2_ssh_status.yml
+  422  ansible-playbook test2_ssh_status.yml
+  423  vi test2_ssh_status.yml
+  424  vi service_sshd_status.yml
+  425  ansible-playbook service_sshd_status.yml
+  426  vi service_sshd_status.yml
+  427  ansible-playbook service_sshd_status.yml
+  428  vi test2_ssh_status.yml
+  429  ansible-playbook test2_ssh_status.yml
+  430  vi test2_ssh_status.yml
+  431  ansible-playbook test2_ssh_status.yml
+  432  vi test2_ssh_status.yml
+  433  ansible-playbook test2_ssh_status.yml
+  434  vi test2_ssh_status.yml
+  435  ansible-playbook test2_ssh_status.yml
+  436  ll
+  437  vi yum_update1.yml
+  438  vi test2_ssh_status.yml
+  439  ansible-playbook test2_ssh_status.yml
+  440  ll
+  441  rm -rf test1_ssh_status.yml
+  442  ansible-playbook test_sshd_status.yml
+  443  rm -rf test1_ssh_status.yml
+  444  rm -rf test_ssh_status.yml
+  445  mv test2_ssh_status.yml test_ssh_status.yml
+  446  ll
+  447  view test_ssh_status.yml
+  448  view test_sshd_status.yml
+  449  vi test_sshd_status.yml
+  450  ansible-playbook test_sshd_status.yml
+  451  vi test_sshd_status.yml
+  452  ansible-playbook test_sshd_status.yml
+  453  vi test_sshd_status.yml
+  454  ansible-playbook test_sshd_status.yml
+  455  vi test_sshd_status.yml
+  456  ansible-playbook test_sshd_status.yml
+  457  vi test_sshd_status.yml
+  458  ansible-playbook test_sshd_status.yml
+  459  vi test_sshd_status.yml
+  460  ansible-playbook test_sshd_status.yml
+  461  vi test_sshd_status.yml
+  462  ansible-playbook test_sshd_status.yml
+  463  vi test_sshd_status.yml
+  464  ansible-playbook test_sshd_status.yml
+  465  vi test_sshd_status.yml
+  466  ansible-playbook test_ssh_status.yml
+  467  vi test_sshd_status.yml
+  468  ansible-playbook test_sshd_status.yml
+  469  vi test_sshd_status.yml
+  470  ansible-playbook test_sshd_status.yml
+  471  vi test_sshd_status.yml
+  472  vi test_ssh_status.yml
+  473  vi test_sshd_status.yml
+  474  ansible-playbook test_sshd_status.yml
+  475  vi test_sshd_status.yml
+  476  ansible-playbook test_sshd_status.yml
+  477  vi test_sshd_status.yml
+  478  ansible-playbook test_sshd_status.yml
+  479  vi test_sshd_status.yml
+  480  ansible-playbook test_sshd_status.yml
+  481  vi test_sshd_status.yml
+  482  ansible-playbook test_sshd_status.yml
+  483  vi test_sshd_status.yml
+  484  ansible-playbook test_sshd_status.yml
+  485  ll
+  486  vi test_sshd_status.yml
+  487  ansible-playbook test_sshd_status.yml
+  488  vi test_sshd_status.yml
+  489  ansible-playbook test_sshd_status.yml
+  490  ll
+  491  rm -rf test_sshd_status.yml
+  492  view
+  493  view test_ssh_status.yml
+  494  view service_sshd_status.yml
+  495  view service_status.yml
+  496  vi service_status.yml
+  497  ansible-playbook service_status.yml
+  498  vi service_status.yml
+  499  ansible-playbook service_status.yml
+  500  vi service_status.yml
+  501  ansible-playbook service_status.yml
+  502  vi service_status.yml
+  503  ansible-playbook service_status.yml
+  504  vi service_status.yml
+  505  ansible-playbook service_status.yml
+  506  vi service_status.yml
+  507  ansible-playbook service_status.yml
+  508  vi service_status.yml
+  509  ansible-playbook service_status.yml
+  510  vi service_status.yml
+  511  ansible-playbook service_status.yml
+  512  vi service_status.yml
+  513  rm -rf service_status.yml
+  514  rm -rf service_sshd_status.yml
+  515  ll
+  516  mv test_ssh_status.yml service_sshd_state.yml
+  517  ll
+  518  view yum_update1.yml
+  519  view yum_update.yml
+  520  ansible-playbook yum_update.yml
+  521  cd ..
+  522  ll
+  523  cd ansible_playbooks/
+  524  ansible-playbook yum_update1.yml
+  525  view yum_update1.yml
+  526  vi yum_update1.yml
+  527  ansible-playbook yum_update1.yml
+  528  ssh 172.31.45.114
+  529  ll
+  530  cd ansible_playbooks/
+  531  ll
+  532  ec2-uer
+  533  cd ansible_playbooks/
+  534  ll
+  535  view yum_update.yml
+  536  view yum_update1.yml
+  537  ansible-playbook yum_update1.yml
+  538  vi yum_update1.yml
+  539  ansible-playbook yum_update1.yml
+  540  ll
+  541  ansible-playbook yum_update1.yml
+  542  ll
+  543  cp yum_update1.yml service_httpd_state.yml
+  544  vi service_httpd_state.yml
+  545  ansible-playbook service_httpd_state.yml
+  546  vi service_httpd_state.yml
+  547  ansible-playbook service_httpd_state.yml
+  548  ll
+  549  vi yum_update1.yml
+  550  mv
+  551  mv yum_update1.yml dnf_update.yml
+  552  ansible-playbook dnf_update.yml
+  553  vi dnf_update.yml
+  554  ansible-playbook dnf_update.yml
+  555  vi dnf_update.yml
+  556  ansible-playbook dnf_update.yml
+  557  ansible-playbook service_httpd_state.yml
+  558  vi  service_httpd_state.yml
+  559  ansible-playbook service_httpd_state.yml
+  560  vi  service_httpd_state.yml
+  561  ansible-playbook service_httpd_state.yml
+  562  cp service_httpd_state.yml service_network_state.yml
+  563  ll
+  564  vi service_network_state.yml
+  565  ansible-playbook service_network_state.yml
+  566  vi service_network_state.yml
+  567  ansible-playbook service_network_state.yml
+  568  ssh 172.31.42.233
+  569  cd /etc/ansible/
+  570  ll
+  571  cat inventory_list
+  572  view ansible.cfg
+  573  vi ansible.cfg
+  574  sudo vi ansible.cfg
+  575  cd /home/ec2-user/ansible_playbooks/
+  576  ll
+  577  ansible-playbook yum_update.yml
+  578  ansible-playbook group_creation.yml
+  579  vi yum_update.yml
+  580  ansible-playbook dnf_update.yml
+  581  vi dnf_update.yml
+  582  ansible-playbook dnf_update.yml
+  583  sudo vi /etc/ansible/ansible.cfg
+  584  history
+  585  ll
+  586  view group_creation.yml
+  587  view user_creation.yml
+  588  view user_deletion.yml
+  589  view group_deletion.yml
+  590  view service_httpd_state.yml
+  591  view service_sshd_state.yml
+  592  view dnf_update.yml
+  593  vi dnf_update.yml
+  594  view dnf_update.yml
+  595  view yum_update.yml
+  596  vi yum_update.yml
+  597  ansible-playbook yum_update.yml
+  598  view yum_update.yml
+  599  Ansible test-servers -m yum -a "name = docker state = present"
+  600  ansible test-servers -m yum -a "name = docker state = present"
+  601  ansible all -m ping
+  602  ansible webserver -m yum -a "name = docker state = present"
+  603  ansible webserver -m dnf -a "name = docker state = present"
+  604  cd ansible_playbooks/
+  605  ll
+  606  cp dnf_update.yml yum-2.yml
+  607  vi yum-2.yml
+  608  ll yum-2.yml
+  609  yum-2.yml.swp
+  610  ls -lha yum-2.yml
+  611  vi yum-2.yml
+  612  ansible-playbook yum-2.yml
+  613  cp yum_update.yml copy.yml
+  614  vi copy.yml
+  615  pwd
+  616  vi copy.yml
+  617  ansible-playbook copy.yml
+  618  ssh 172.31.42.233
+  619  cd ansible_playbooks/
+  620  ll
+  621  vi copy.yml
+  622  ansible-playbook copy.yml
+  623  cp yum_update.yml recover.yml
+  624  cat yum_update.yml
+  625  cat copy.yml
+  626  ansible-playbook copy.yml
+  627  vi copy.yml
+  628  ll
+  629  vi copy.yml
+  630  ansible-playbook copy.yml
+  631  cd ansible_playbooks/
+  632  ll
+  633  vi yum_update.yml
+  634  vi dnf_update.yml
+  635  ansible-playbook dnf_update.yml
+  636  vi dnf_update.yml
+  637  ansible-playbook dnf_update.yml
+  638  vi dnf_update.yml
+  639  ansible-playbook dnf_update.yml
+  640  ssh 172.31.45.114
+  641  ssh 172.31.42.233
+  642  ssh 172.31.45.114
+  643  cd  /etc/skel/
+  644  man sh
+  645  bash
+  646  /bin/sh
+  647  ll
+  648  cat service_httpd_state.yml
+  649  vi  service_httpd_state.yml
+  650  sudo su -
+  651  python3 -m user test all
+  652  ansible -m user test all
+  653  ansible all -m shell -a uptime
+  654  cat /etc/ansible/inventory_list
+  655  vi  /etc/ansible/inventory_list
+  656  sudo vi  /etc/ansible/inventory_list
+  657  cat /etc/ansible/inventory_list
+  658  ansible all -m shell -a uptime
+  659  ansible all -m shell -a free -m
+  660  ansible all -m shell -a free m
+  661  ansible all -m shell -a "free -m"
+  662  cat /etc/ansible/inventory_list
+  663  vi  /etc/ansible/inventory_list
+  664  sudo vi  /etc/ansible/inventory_list
+  665  ansible all -m dnf install -a httpd
+  666  ansible all -m shell -a uptime
+  667  sudo vi  /etc/ansible/inventory_list
+  668  sudo su -
+  669  sudo su -
+  670  ls
+  671  cd ansible_playbooks/
+  672  l
+  673  ll
+  674  ls -lthr
+  675  cat group_creation.yml
+  676  cat dnf_update.yml
+  677  man bash
+  678  cat /etc/shells
+  679  bash
+  680  ll
+  681  scp yum_update.yml ec2-user@172.31.45.114:/home.ec2_user
+  682  sudo su -
+  683  scp yum_update.yml ec2_user@172.31.45.114:/home/ec2-user/
+  684  scp yum_update.yml ec2-user@172.31.45.114:/home/ec2-user/
+  685  ssh 172.31.45.114
+  686  ansible server2 -m command -a "fdisk -l"
+  687  ansible server2 -m command -a "fdisk -l" all
+  688  ansible server2 -m command all -a "fdisk -l"
+  689  ansible all -m command -a "fdisk -l"
+  690  ansible server3 -m command -a "whoami" --ask-pass
+  691  ansible all  -m command -a "whoami" --ask-pass
+  692  ansible all  -m command -a "whoami"
+  693  sudo su -
+  694  cd /home/ec2-user/ansible_playbooks/
+  695  ll
+  696  cp dnf_update.yml ec2-instance_start.yml
+  697  vi ec2-instance_start.yml
+  698  ansible-playbook ec2-instance_start.yml
+  699  vi ec2-instance_start.yml
+  700  ansible-playbook ec2-instance_start.yml
+  701  vi dnf_update.yml
+  702  ansible-playbook ec2-instance_start.yml
+  703  vi ec2-instance_start.yml
+  704  ansible-playbook ec2-instance_start.yml
+  705  vi ec2-instance_start.yml
+  706  ansible-playbook ec2-instance_start.yml
+  707  vi ec2-instance_start.yml
+  708  ansible-playbook ec2-instance_start.yml
+  709  vi dnf_update.yml
+  710  vi ec2-instance_start.yml
+  711  ansible-playbook ec2-instance_start.yml
+  712  vi dnf_update.yml
+  713  cd ansible_playbooks/
+  714  ll
+  715  vi ec2-instance_start.yml
+  716  ansible-playbook ec2-instance_start.yml
+  717  vi ec2-instance_start.yml
+  718  ansible-playbook ec2-instance_start.yml
+  719  cd ansible_playbooks/
+  720  ll
+  721  vi ec2-instance_start.yml
+  722  ansible-playbook ec2-instance_start.yml
+  723  vi ec2-instance_start.yml
+  724  ansible-playbook ec2-instance_start.yml
+  725  cd ansible_playbooks/
+  726  ll
+  727  cp ec2-instance_start.yml ec2-instance_stop.yml
+  728  vi ec2-instance_stop.yml
+  729  vi stop-instances.yml
+  730  ansible-playbook stop-instances.yml
+  731  ssh 172.31.47.79
+  732  ll
+  733  vi local_action.yml
+  734  ansible-playbook local_action.yml
+  735  ansible-playbook stop-instances.yml
+  736  vi stop-instances.yml
+  737  vi stop-instances1.yml
+  738  ansible-playbook stop-instances1.yml
+  739  vi stop-instances1.yml
+  740  ansible-playbook stop-instances1.yml
+  741  vi stop-instances1.yml
+  742  ansible-playbook stop-instances1.yml
+  743  vi stop-instances1.yml
+  744  ansible-playbook stop-instances1.yml
+  745  cat ec2-instance_stop.yml
+  746  vi stop-instances1.yml
+  747  ansible-playbook stop-instances1.yml
+  748  vi stop-instances1.yml
+  749  ansible-playbook stop-instances1.yml
+  750  cd ansible_playbooks/
+  751  ll
+  752  cat  stop-instances1.yml
+  753  vi stop-instances2.yml
+  754  ansible-playbook stop-instances2.yml
+  755  vi stop-instances2.yml
+  756  ansible-playbook stop-instances2.yml
+  757  vi stop-instances2.yml
+  758  ansible-playbook stop-instances2.yml
+  759  vi stop-instances2.yml
+  760  ansible-playbook stop-instances2.yml
+  761  vi stop-instances2.yml
+  762  ansible-playbook stop-instances2.yml
+  763  vi stop-instances2.yml
+  764  ansible-playbook stop-instances2.yml
+  765  vi stop-instances1
+  766  ll
+  767  vi stop-instances1.yml
+  768  ansible-playbook stop-instances1.yml
+  769  vi stop-instances1.yml
+  770  ansible-playbook stop-instances1.yml
+  771  vi stop-instances1.yml
+  772  ansible-playbook stop-instances1.yml
+  773  vi stop-instances1.yml
+  774  ansible-playbook stop-instances1.yml
+  775  vi stop-instances1.yml
+  776  ansible-playbook stop-instances1.yml
+  777  sudo shutdown -n now
+  778  shutdown -n now
+  779  shutdown -h now
+  780  sudo shutdown -h now
+  781   ansible webserver -a "/sbin/reboot"
+  782  ansible -m pinf
+  783  ansible -m ping
+  784  ansible all -m ping
+  785   ansible webserver -a "/sbin/reboot" --become --ask-become-pass
+  786   ansible webserver -a "/sbin/reboot" ec2-user --become --ask-become-pass
+  787  ansible webserver -a "/sbin/reboot" -f 10
+  788  ansible webserver -a "/sbin/reboot" -f 10 -u ec2-user --become [--ask-become-pass]
+  789  cd ansible_playbooks/
+  790  ll
+  791  view dnf_update.yml
+  792  ansible webserver -a "/sbin/reboot" -f 10 -u ec2-user --become [--ask-become-pass]
+  793  ansible webserver -a "/sbin/reboot" -f 10 -u ec2-user
+  794  ansible webserver -a "/sbin/reboot" -f 10 -u sudo
+  795  ansible atlanta -a "/sbin/reboot" -f 10
+  796  ansible webserver -a "/sbin/reboot" -f 10
+  797  ansible webserver -m ansible.builtin.shell -a 'echo $TERM'
+  798  ansible webserver -m ansible.builtin.copy -a "src=/etc/hosts dest=/tmp/hosts"
+  799  ansible webserver -m ansible.builtin.file -a "dest=/path/to/c mode=755 owner=ec2-user group=ec2-user state=directory"
+  800  ansible webservers -m ansible.builtin.file -a "dest=/path mode=755 owner=mdehaan group=mdehaan state=directory"
+  801  ansible webserver -m ansible.builtin.file -a "dest=/path mode=755 owner=ec2-user group=ec2-user state=directory"
+  802  ansible webserver -m ansible.builtin.yum -a "name=acme state=present"
+  803  ansible webserver -m ansible.builtin.dnf -a "name=acme state=present"
+  804  ansible webserver -m ansible.builtin.service -a "name=httpd state=restarted"
+  805  cd ansible_playbooks/
+  806  ll
+  807  ansible webserver -m ansible.builtin.service -a "name=httpd state=restarted"
+  808  ansible webserver -m ansible.builtin.dnf -a "name=acme state=present"
+  809  history
+  810  ansible webserver -a "/sbin/reboot"  ec2-user --become --ask-become-pass
+  811  ansible webserver -a "/sbin/reboot"  --become --ask-become-pass
+  812  ansible webserver -a "/sbin/reboot"
+  813  reboot
+  814  locate reboot
+  815  locate reboot  | grep bin
+  816  cat /etc/passwd
+  817  ll
+  818  cat stop-instances1.yml
+  819  ip addr
+  820  cat /etc/hosts
+  821  sudo su -
+  822  ansible webserver -a "/sbin/reboot"  ec2-user
+  823  ansible webserver -a "/sbin/reboot"
+  824  ansible -m ping all
+  825  sudo su -
+  826  vi /etc/passwd
+  827  cat /etc/passwd
+  828  sudo su -
+  829  sudo su - root
+  830  sudo su -
+  831  vi /etc/passwd
+  832  sudo su -
+  833  vi /etc/passwd
+  834  whoami
+  835  vi /etc/passwd
+  836  ll
+  837  cat stop-instances2.yml
+  838  sudo su -
+  839  man  uid
+  840  man   gid
+  841  cat /etc/group
+  842  cat /etc/group | grep root
+  843  vi /etc/group
+  844  sudo vi /etc/group
+  845  ll
+  846  vi copy.yml
+  847  vi dnf_update.yml
+  848  vi ec2-instance_start.yml
+  849  vi ec2-instance_stop.yml
+  850  vi group_creation.yml
+  851  vi group_deletion.yml
+  852  vi local_action.yml
+  853  vi recover.yml
+  854  vi service_httpd_state.yml
+  855  vi service_network_state.yml
+  856  vi service_sshd_state.yml
+  857  vi stop-instances1.yml
+  858  vi user_creation.yml
+  859  vi user_deletion.yml
+  860  vi yum-2.yml
+  861  vi yum_update.yml
+  862  history

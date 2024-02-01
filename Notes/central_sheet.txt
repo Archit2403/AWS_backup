@@ -1,0 +1,262 @@
+testing_key
+shutdown -h now
+
+
+admin@123
+Aqua1234#
+
+terminuis
+
+Github: QcLLoyd#241
+
+access_code_git1:
+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
+
+access_code_git2_8Jan:
+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
+
+token 10June:
+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
+gittocken15July:
+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
+Archit2403
+
+
+JEnkins::
+Admin
+SatURday@933
+
+TWS-Jenkins::
+admin
+Rum@L1938
+
+VTB-Jenkins::
+admin
+Vibr0se$895
+
+
+VTB-Ubuntu::
+123@toro
+
+Dockerhub::
+architkoli24
+architkoli46@gmail.com
+HyuGen$26b777
+
+
+FROM nginx:latest
+COPY . /usr/share/nginx/html
+CMD ["nginx", "-g", "daemon off;", "-p", "8002:80"]
+
+
+cd /project
+sudo docker build -t my-html-app ./project/.
+sudo docker run -d --name html-page -p 8002:80 my-html-app
+
+
+
+# Use an official Nginx runtime as the base image
+FROM nginx:latest
+# Copy the HTML file to the default Nginx HTML directory
+COPY ./form.html /usr/share/nginx/html/
+# Expose port 8002
+EXPOSE 8002
+
+docker build -t my-html-app .
+docker run -d --name html-page -p 8002:80 my-html-app
+
+
+docker build . -t todo-node-app
+docker run -d --name node-todo-app -p 8000:8000 todo-node-app
+
+
+
+FROM node:12.2.0-alpine
+WORKDIR app
+COPY . .
+RUN npm install
+RUN npm install -g npm@9.7.2
+RUN npm run test
+EXPOSE 8000
+CMD ["node","app.js"]
+
+
+FROM node:16-alpine
+WORKDIR /app
+COPY . .
+RUN npm install
+CMD ["node", "app.js"]
+
+
+npm install -g npm@9.8.0
+
+
+
+Jenkins Admin PD:
+ece0e6f8288143888ada5ed065fc6d52
+Jenkins users:
+admin
+SuneD#@$h78
+
+
+jenkins docker:
+8e90660018424ddcb0180cb411341fcd
+creds:
+admin
+Jdu89BU!@ns
+/var/jenkins_home/jobs/test1/builds/1
+##Post Reinstallation
+creds:
+archit
+JItjutsu87$325
+
+
+session recording:
+https://infosystechnologies.sharepoint.com/sites/AWSCertifiedCloudPractitioner/Shared%20Documents/Forms/AllItems.aspx?FolderCTID=0x0120002C2D17ACF2C3EB4FA4E667EAC81438F4&id=%2Fsites%2FAWSCertifiedCloudPractitioner%2FShared%20Documents%2FGeneral%2FAWS%2DCP%2DCertificationArtifacts%2FSessionRecording&viewid=2f70e21d%2Dd8f6%2D40fb%2Db1d2%2D63536d456697
+
+slide:
+https://infosystechnologies.sharepoint.com/sites/AWSCertifiedCloudPractitioner/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FAWSCertifiedCloudPractitioner%2FShared%20Documents%2FGeneral%2FAWS%2DCP%2DCertificationArtifacts%2FSlides&p=true&ga=1
+
+
+
+
+
+
+
+https://www.youtube.com/watch?v=gJv0PcfUXE8 Git on Linux Simplified | How to Setup Your First Repository and Use Version Control // Linode
+
+https://www.youtube.com/watch?v=7bA0gTroJjw&list=PLTnRtjQN5iebIPHxvDEDY-krsNTlCXRhe Linode Playlist on Kubernetes 
+
+https://www.youtube.com/watch?v=8T_i3E0kUFE&list=PLTnRtjQN5ieYD97JCZtcGbIjq1EINih2G
+
+https://www.youtube.com/watch?v=TLg3QHaF0xM&list=PLTnRtjQN5ieYSFLCbxME5GvnlmSZjEJWg Linode Playlist on Docker
+
+https://www.youtube.com/watch?v=3s1kselxQmQ&list=PLTnRtjQN5iebLpaJpCuuzVqXyPI_h5x_t Learn the basics from Linode
+
+https://www.youtube.com/watch?v=P0QZnAnsQ4c The Linux Filesystem Explained | How Each Directory is Used | Linode
+
+
+
+
+
+Service Now has lot of capabilities, it has Automation, Discovery, DevSecOps, PPM (Project Management) in addition to Incident, CHange, Problem and many more!
+from Srini Pagadala to everyone:    3:45 PM
+So You mean JIRA is influenced with AGILE
+from Babu Rengaraj to everyone:    3:46 PM
+How monitoring configured on Kubernetes(Dev , UAT & prod)?.
+from Satyanarayana Murthy Kotta to everyone:    3:46 PM
+Yes ... JIRA is agile aligned mgmt tool
+What are top 5 ALMs ( Agile Lifecycle Management) tools Ex- Service Now, Rally, JIRA etc ?
+
+
+
+
+[root@ip-172-31-37-154 ec2-user]# ll -l
+total 4
+-rw-rw-r-- 1 ec2-user ec2-user 718 Jan  7 14:58 normalU7JanH.txt
+drwxr-xr-x 3 root     root      85 Jan  7 13:48 test1
+drwxr-xr-x 3 root     root     141 Jan  7 14:58 testFt
+[root@ip-172-31-37-154 ec2-user]# ll -la
+total 24
+drwx------ 6 ec2-user ec2-user 174 Jan  7 14:59 .
+drwxr-xr-x 4 root     root      35 Dec 25 05:34 ..
+-rw------- 1 ec2-user ec2-user 509 Jan  7 15:00 .bash_history
+-rw-r--r-- 1 ec2-user ec2-user  18 Jul 15  2020 .bash_logout
+-rw-r--r-- 1 ec2-user ec2-user 193 Jul 15  2020 .bash_profile
+-rw-r--r-- 1 ec2-user ec2-user 231 Jul 15  2020 .bashrc
+drwxr-xr-x 8 root     root     184 Jan  7 14:53 .git
+-rw-rw-r-- 1 ec2-user ec2-user 718 Jan  7 14:58 normalU7JanH.txt
+drwx------ 2 ec2-user ec2-user  29 Dec 24 12:12 .ssh
+drwxr-xr-x 3 root     root      85 Jan  7 13:48 test1
+drwxr-xr-x 3 root     root     141 Jan  7 14:58 testFt
+-rw------- 1 ec2-user ec2-user 967 Jan  7 14:59 .viminfo
+[root@ip-172-31-37-154 ec2-user]# ll -la test1
+total 16
+drwxr-xr-x 3 root     root      85 Jan  7 13:48 .
+drwx------ 6 ec2-user ec2-user 174 Jan  7 14:59 ..
+-rw-r--r-- 1 root     root      41 Jan  7 05:46 7Jan_example
+-rw-r--r-- 1 root     root     137 Jan  7 05:46 Aurora
+drwxr-xr-x 8 root     root     198 Jan  7 05:46 .git
+-rw-r--r-- 1 root     root     115 Jan  7 05:46 Hp_Stack
+-rw-r--r-- 1 root     root       7 Jan  7 05:21 README.md
+
+
+
+
+
+===========================================================================================================================================
+
+[root@ip-172-31-37-154 ec2-user]# cd test1
+[root@ip-172-31-37-154 test1]# git push origin main
+Username for 'https://github.com': Archit2403
+Password for 'https://Archit2403@github.com':
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/Archit2403/test1.git/'
+[root@ip-172-31-37-154 test1]# git push origin main
+Username for 'https://github.com': Archit2403
+Password for 'https://Archit2403@github.com':
+Everything up-to-date
+[root@ip-172-31-37-154 test1]# cd ..
+[root@ip-172-31-37-154 ec2-user]# ll
+total 4
+-rw-rw-r-- 1 ec2-user ec2-user 718 Jan  7 14:58 normalU7JanH.txt
+drwxr-xr-x 3 root     root      85 Jan  7 13:48 test1
+drwxr-xr-x 3 root     root     141 Jan  7 14:58 testFt
+[root@ip-172-31-37-154 ec2-user]# mv testFt/ test1
+[root@ip-172-31-37-154 ec2-user]# ll test1/
+total 16
+-rw-r--r-- 1 root root  41 Jan  7 05:46 7Jan_example
+-rw-r--r-- 1 root root 137 Jan  7 05:46 Aurora
+-rw-r--r-- 1 root root 115 Jan  7 05:46 Hp_Stack
+-rw-r--r-- 1 root root   7 Jan  7 05:21 README.md
+drwxr-xr-x 3 root root 141 Jan  7 14:58 testFt
+[root@ip-172-31-37-154 ec2-user]# cd test1/
+[root@ip-172-31-37-154 test1]# git add testFt
+[root@ip-172-31-37-154 test1]# git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   testFt/1JanDirectory/1JanLL
+        new file:   testFt/1JanTest1
+        new file:   testFt/1JanTest2
+        new file:   testFt/7Jan.txt
+        new file:   testFt/SudoU7JanH
+        new file:   testFt/SudoU7JanH.txt
+        new file:   testFt/abc
+        new file:   testFt/test2
+
+[root@ip-172-31-37-154 test1]# git commit -m "files added now"
+[main d01957d] files added now
+ 8 files changed, 417 insertions(+)
+ create mode 100644 testFt/1JanDirectory/1JanLL
+ create mode 100644 testFt/1JanTest1
+ create mode 100644 testFt/1JanTest2
+ create mode 100644 testFt/7Jan.txt
+ create mode 100644 testFt/SudoU7JanH
+ create mode 100644 testFt/SudoU7JanH.txt
+ create mode 100644 testFt/abc
+ create mode 100644 testFt/test2
+[root@ip-172-31-37-154 test1]# git status
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+[root@ip-172-31-37-154 test1]# git push origin main
+Username for 'https://github.com': Archit2403
+Password for 'https://Archit2403@github.com':
+Enumerating objects: 11, done.
+Counting objects: 100% (11/11), done.
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (10/10), 3.84 KiB | 3.84 MiB/s, done.
+Total 10 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Archit2403/test1.git
+   c34ed9a..d01957d  main -> main
+[root@ip-172-31-37-154 test1]#
+
+
+

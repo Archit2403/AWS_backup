@@ -1,0 +1,57 @@
+ANSIBLE MAIN SERVER================================================================
+
+[ec2-user@ip-172-31-35-70 ~]$ history
+    1  sudo su -
+    2  pwd
+    3  mkdir ansible-scripts
+    4  cd ansible-scripts/
+    5  touch create-ec2instance.yml
+    6  vi create-ec2instance.yml
+    7  sudo vi /etc/ansible/hosts
+    8  ansible-playbook --syntax create-ec2instance.yml
+    9  ansible-playbook -C create-ec2instance.yml
+   10  ansible-playbook create-ec2instance.yml
+   11  vi create-ec2instance.yml
+   12  cat create-ec2instance.yml
+   13  vi create-ec2instance1.yml
+   14  ansible-playbook --syntax create-ec2instance1.yml
+   15  ansible-playbook -C create-ec2instance1.yml
+   16  sudo pip install boto3
+   17  ansible-playbook -C create-ec2instance1.yml
+   18  cat create-ec2instance.yml
+   19  vi  create-ec2instance1.yml
+   20  ansible-playbook --syntax create-ec2instance1.yml
+   21  vi  create-ec2instance1.yml
+   22  ansible-playbook --syntax create-ec2instance1.yml
+   23  ansible-playbook -C create-ec2instance1.yml
+   24  ansible-playbook create-ec2instance1.yml
+   25  sudo su -
+   26  cd ansible-scripts/
+   27  l
+   28  ll
+   29  view start-ec2instance.yml
+   30  vi start-ec2instance.yml
+   31  chown ec2-user:ec2-user *
+   32  sudo chown ec2-user:ec2-user *
+   33  ll
+   34  vi start-ec2instance.yml
+   35  ansible-playbook start-ec2instance.yml
+   36  vi stop-ec2instance.yml
+   37  ansible-playbook stop-ec2instance.yml
+   38  sudo su -
+   39  history
+[ec2-user@ip-172-31-35-70 ~]$ sudo su -
+Last login: Sun May 14 04:57:09 UTC 2023 on pts/0
+[root@ip-172-31-35-70 ~]# history
+    1  yum install ansible
+    2  sudo amazon-linux-extras install ansible2
+    3  yum install python-pip
+    4  yum install boto
+    5  pip -V
+    6  ansible --version
+    7  pip install botot
+    8  pip install boto
+    9  logout
+   10  history
+[root@ip-172-31-35-70 ~]#
+

@@ -1,0 +1,367 @@
+login as: ec2-user
+Authenticating with public key "testing_key"
+Last login: Sat Jan  7 18:40:10 2023 from 182.48.236.240
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+[ec2-user@ip-172-31-7-207 ~]$ sudo su
+[root@ip-172-31-7-207 ec2-user]# which git
+/usr/bin/which: no git in (/sbin:/bin:/usr/sbin:/usr/bin)
+[root@ip-172-31-7-207 ec2-user]# exit
+exit
+[ec2-user@ip-172-31-7-207 ~]$ which git
+/usr/bin/which: no git in (/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/home/ec2-user/.local/bin:/home/ec2-user/bin)
+[ec2-user@ip-172-31-7-207 ~]$ sudo yum install git
+[ec2-user@ip-172-31-7-207 ~]$ which git
+/usr/bin/git
+[ec2-user@ip-172-31-7-207 ~]$ cd /home/ec2-user/
+[ec2-user@ip-172-31-7-207 ~]$ ll
+total 0
+drwxr-xr-x 2 root root 6 Jan  7 18:40 8Jan
+[ec2-user@ip-172-31-7-207 ~]$ cd 8Jan/
+[ec2-user@ip-172-31-7-207 8Jan]$ testGit
+-bash: testGit: command not found
+[ec2-user@ip-172-31-7-207 8Jan]$ mkdir testGit
+mkdir: cannot create directory ‘testGit’: Permission denied
+[ec2-user@ip-172-31-7-207 8Jan]$ sudo su
+[root@ip-172-31-7-207 8Jan]# mkdir testGit
+[root@ip-172-31-7-207 8Jan]# cd testGit
+[root@ip-172-31-7-207 testGit]# pwd
+/home/ec2-user/8Jan/testGit
+[root@ip-172-31-7-207 testGit]# git init repo8JanTest
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in /home/ec2-user/8Jan/testGit/repo8JanTest/.git/
+[root@ip-172-31-7-207 testGit]# ll
+total 0
+drwxr-xr-x 3 root root 18 Jan  8 08:06 repo8JanTest
+[root@ip-172-31-7-207 testGit]# ll -la
+total 0
+drwxr-xr-x 3 root root 26 Jan  8 08:06 .
+drwxr-xr-x 3 root root 21 Jan  8 08:05 ..
+drwxr-xr-x 3 root root 18 Jan  8 08:06 repo8JanTest
+[root@ip-172-31-7-207 testGit]# cd repo8JanTest/
+[root@ip-172-31-7-207 repo8JanTest]# ll -la
+total 0
+drwxr-xr-x 3 root root  18 Jan  8 08:06 .
+drwxr-xr-x 3 root root  26 Jan  8 08:06 ..
+drwxr-xr-x 7 root root 119 Jan  8 08:06 .git
+[root@ip-172-31-7-207 repo8JanTest]# ll -la .git/branches/
+total 0
+drwxr-xr-x 2 root root   6 Jan  8 08:06 .
+drwxr-xr-x 7 root root 119 Jan  8 08:06 ..
+[root@ip-172-31-7-207 repo8JanTest]# ll -la .git/config
+-rw-r--r-- 1 root root 92 Jan  8 08:06 .git/config
+[root@ip-172-31-7-207 repo8JanTest]# cd .git/config
+bash: cd: .git/config: Not a directory
+[root@ip-172-31-7-207 repo8JanTest]# ll -la
+total 0
+drwxr-xr-x 3 root root  18 Jan  8 08:06 .
+drwxr-xr-x 3 root root  26 Jan  8 08:06 ..
+drwxr-xr-x 7 root root 119 Jan  8 08:06 .git
+[root@ip-172-31-7-207 repo8JanTest]# ll -la .git/
+total 16
+drwxr-xr-x 7 root root  119 Jan  8 08:06 .
+drwxr-xr-x 3 root root   18 Jan  8 08:06 ..
+drwxr-xr-x 2 root root    6 Jan  8 08:06 branches
+-rw-r--r-- 1 root root   92 Jan  8 08:06 config
+-rw-r--r-- 1 root root   73 Jan  8 08:06 description
+-rw-r--r-- 1 root root   23 Jan  8 08:06 HEAD
+drwxr-xr-x 2 root root 4096 Jan  8 08:06 hooks
+drwxr-xr-x 2 root root   21 Jan  8 08:06 info
+drwxr-xr-x 4 root root   30 Jan  8 08:06 objects
+drwxr-xr-x 4 root root   31 Jan  8 08:06 refs
+[root@ip-172-31-7-207 repo8JanTest]# cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+        logallrefupdates = true
+[root@ip-172-31-7-207 repo8JanTest]# nano hello.txt                                  	###ctr+O->Save>>>Enter>>>ctr+X->Exit>>>Enter
+[root@ip-172-31-7-207 repo8JanTest]# ll
+total 4
+-rw-r--r-- 1 root root 42 Jan  8 08:14 hello.txt
+[root@ip-172-31-7-207 repo8JanTest]# cat hello.txt
+Hello This is the first Line for new repo
+[root@ip-172-31-7-207 repo8JanTest]# git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        hello.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+[root@ip-172-31-7-207 repo8JanTest]# git add hello.txt
+[root@ip-172-31-7-207 repo8JanTest]# git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   hello.txt
+
+[root@ip-172-31-7-207 repo8JanTest]# git config --global user.name "Archit2403"
+[root@ip-172-31-7-207 repo8JanTest]# git config --global user.email "architkoli46@gmail.com"
+[root@ip-172-31-7-207 repo8JanTest]# git commit -m "Initial commit of Hello.txt"
+[master (root-commit) 5470e16] Initial commit of Hello.txt
+ 1 file changed, 1 insertion(+)
+ create mode 100644 hello.txt
+[root@ip-172-31-7-207 repo8JanTest]# git status
+On branch master
+nothing to commit, working tree clean
+[root@ip-172-31-7-207 repo8JanTest]# cat .git/config
+[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+        logallrefupdates = true
+[root@ip-172-31-7-207 repo8JanTest]# nano hello.txt
+[root@ip-172-31-7-207 repo8JanTest]# cat hello.txt
+Hello This is the first Line for new repo
+This is second Line Modified version
+[root@ip-172-31-7-207 repo8JanTest]# git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[root@ip-172-31-7-207 repo8JanTest]# git diff hello.txt
+diff --git a/hello.txt b/hello.txt
+index e539af5..929641e 100644
+--- a/hello.txt
++++ b/hello.txt
+@@ -1 +1,2 @@
+ Hello This is the first Line for new repo
++This is second Line Modified version
+[root@ip-172-31-7-207 repo8JanTest]# nano hello.txt
+[root@ip-172-31-7-207 repo8JanTest]# git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   hello.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+[root@ip-172-31-7-207 repo8JanTest]# git diff hello.txt
+diff --git a/hello.txt b/hello.txt
+index e539af5..7212a52 100644
+--- a/hello.txt
++++ b/hello.txt
+@@ -1 +1,3 @@
+ Hello This is the first Line for new repo
++This is second Line Modified version
++This is Third Line Hope everything goes well!
+[root@ip-172-31-7-207 repo8JanTest]# git add hello.txt
+[root@ip-172-31-7-207 repo8JanTest]# git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   hello.txt
+
+[root@ip-172-31-7-207 repo8JanTest]# git commit                         $$$It opens up the editor where you can put msg in multiple lines
+[master 690d19a] Updated hello.txt
+ 1 file changed, 2 insertions(+)
+[root@ip-172-31-7-207 repo8JanTest]# git status
+On branch master
+nothing to commit, working tree clean
+[root@ip-172-31-7-207 repo8JanTest]# git log --oneline
+690d19a (HEAD -> master) Updated hello.txt
+5470e16 Initial commit of Hello.txt
+[root@ip-172-31-7-207 repo8JanTest]# cat hello.txt
+Hello This is the first Line for new repo
+This is second Line Modified version
+This is Third Line Hope everything goes well!
+[root@ip-172-31-7-207 repo8JanTest]# git revert 690d19a
+######VI Editor View -----------------------------------------------------------------------------------
+Revert "Updated hello.txt"
+
+This reverts commit 690d19a05fd99d6995cf5e95f5269dfca3329e24.
+	
+Encountered an issue, ticket #17728282, reverting previous change
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+# Changes to be committed:
+#       modified:   hello.txt
+--------------------------------------------------------------------------------------------------------
+[master ff63292] Revert "Updated hello.txt"
+ 1 file changed, 2 deletions(-)
+[root@ip-172-31-7-207 repo8JanTest]# cat hello.txt
+Hello This is the first Line for new repo
+[root@ip-172-31-7-207 repo8JanTest]# cd ..
+[root@ip-172-31-7-207 testGit]# git clone https://github.com/Archit2403/hello.git
+Cloning into 'hello'...
+warning: You appear to have cloned an empty repository.
+[root@ip-172-31-7-207 testGit]# ll
+total 0
+drwxr-xr-x 3 root root 18 Jan  8 08:51 hello
+drwxr-xr-x 3 root root 35 Jan  8 08:43 repo8JanTest
+[root@ip-172-31-7-207 testGit]# cat hello/.git/config
+[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+        logallrefupdates = true
+[remote "origin"]
+        url = https://github.com/Archit2403/hello.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "main"]
+        remote = origin
+        merge = refs/heads/main
+[root@ip-172-31-7-207 testGit]# cat repo8JanTest/.git/config
+[core]
+        repositoryformatversion = 0
+        filemode = true
+        bare = false
+        logallrefupdates = true
+[root@ip-172-31-7-207 testGit]# cd repo8JanTest/
+[root@ip-172-31-7-207 repo8JanTest]# git remote add origin https://github.com/Archit2403/repo8JanTest.git
+[root@ip-172-31-7-207 repo8JanTest]# git push origin master
+Username for 'https://github.com': Archit2403
+Password for 'https://Archit2403@github.com':
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (7/7), 733 bytes | 733.00 KiB/s, done.
+Total 7 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To https://github.com/Archit2403/repo8JanTest.git
+ * [new branch]      master -> master
+[root@ip-172-31-7-207 repo8JanTest]#
+
+
+
+
+
+
+
+
+
+
+===========================================================================================================================================
+
+
+
+
+login as: ec2-user
+Authenticating with public key "testing_key"
+Last login: Sun Apr  9 06:52:00 2023 from 110.226.178.148
+
+       __|  __|_  )
+       _|  (     /   Amazon Linux 2 AMI
+      ___|\___|___|
+
+https://aws.amazon.com/amazon-linux-2/
+62 package(s) needed for security, out of 81 available
+Run "sudo yum update" to apply all updates.
+[ec2-user@ip-172-31-7-207 ~]$ history
+    1  sudo su
+    2  which git
+    3  sudo yum install git
+    4  which git
+    5  cd /home/ec2-user/
+    6  ll
+    7  cd 8Jan/
+    8  testGit
+    9  mkdir testGit
+   10  sudo su
+   11  sudo uname -r
+   12  sudo su -
+   13  history
+[ec2-user@ip-172-31-7-207 ~]$ sudo su -
+Last login: Sun Apr  9 06:52:18 UTC 2023 on pts/0
+[root@ip-172-31-7-207 ~]# history
+    1  mkdir 8Jan
+    2  cd 8Jan/
+    3  shutdown -h now
+    4  which git
+    5  exit
+    6  mkdir testGit
+    7  cd testGit
+    8  pwd
+    9  git init repo8JanTest
+   10  ll
+   11  ll -la
+   12  cd repo8JanTest/
+   13  ll -la
+   14  ll -la .git/branches/
+   15  ll -la .git/config
+   16  cd .git/config
+   17  ll -la
+   18  ll -la .git/
+   19  cat .git/config
+   20  nano hello.txt
+   21  ll
+   22  cat hello.txt
+   23  git status
+   24  git add hello.txt
+   25  git status
+   26  git config --global user.name "Archit2403"
+   27  git config --global user.email "architkoli46@gmail.com"
+   28  git commit -m "Initial commit of Hello.txt"
+   29  git status
+   30  cat .git/config
+   31  nano hello.txt
+   32  cat hello.txt
+   33  git status
+   34  git diff hello.txt
+   35  nano hello.txt
+   36  git status
+   37  git diff hello.txt
+   38  git add hello.txt
+   39  git status
+   40  git commit
+   41  git status
+   42  git log --oneline
+   43  cat hello.txt
+   44  git revert 690d19a
+   45  cat hello.txt
+   46  cd ..
+   47  git clone https://github.com/Archit2403/hello.git
+   48  ll
+   49  cat hello/.git/config
+   50  cat repo8JanTest/.git/config
+   51  cd repo8JanTest/
+   52  git remote add origin https://github.com/Archit2403/repo8JanTest.git
+   53  git push origin master
+   54  shutdown -h now
+   55  uname -r
+   56  uname r
+   57  uname
+   58  uname -r
+   59  history
+[root@ip-172-31-7-207 ~]#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

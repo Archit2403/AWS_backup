@@ -1,0 +1,60 @@
+
+---
+ - hosts: webserver
+   remote_user: ec2-user
+   become: yes
+   become_method: sudo
+   gather_facts: yes
+   connection: ssh
+
+   tasks:
+     #- name: Gather facts
+     #action: ec2_facts
+
+   - name: restart a particular instance by its ID
+     amazon.aws.ec2_instance:
+      state: restarted
+      instance_ids:
+       - i-0374b2fbdf2b6ab8e
+     #local_action:
+     # module: ec2
+     # region: ap-south-1
+     # instance_ids :
+     #   - i-0374b2fbdf2b6ab8e
+     # state: stopped
+----------------------------------------------------------------------
+- name: Stop instances
+  hosts: localhost
+  gather_facts: false
+  vars:
+    ami: 'ami-07d3a50bd29811cd1'
+    region: 'us-east-1'
+    instance:
+      - 'i-0374b2fbdf2b6ab8e'
+  tasks:
+    - amazon.aws.ec2:
+        aws_access_key: "AKIA2MDYVMKDIVNMINJJ"
+        aws_secret_key: "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"
+        # profile: Admins
+        instance_ids: "{{ instance }}"
+        state: 'stopped'
+        wait: yes
+        region: "{{ region }}"
+  handlers:
+    - name: Instance terminated
+      debug:
+        msg: Instance killed
+--------------------------------------------------------------------
+- name: Stop instances
+  hosts: webserver
+  gather_facts: false
+  connection: ssh
+  tasks:
+  - pip:
+     name: boto
+  - name: stop ec2
+    ec2:
+	 instance_ids: 'i-0374b2fbdf2b6ab8e'
+	 region: 'ap-south-1'
+	 state: stopped
+	 wait: True
